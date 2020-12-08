@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-Type" content="text/html"; charset=UTF-8>
+    <title>로그인</title>
+</head>
+<body>
+    {% if mes %}
+        <script>
+            alert("{{ mes }}")
+        </script>
+    {% endif %}
+    <form action="{% url 'project:login' %}" method="post">
+    {% csrf_token %}
+        아이디 : <input type="text" name="id"></br>
+        패스워드 : <input type="password" name="pw"></br>
+        <input type="submit" name="Register"></br>
+    </form>
+    <a href="{% url 'project:reg' %}">회원가입</a>
+</body>
+</html>

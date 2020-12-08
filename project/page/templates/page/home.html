@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if mes %}
+    <script>
+        alert("{{mes}}");
+    </script>
+    {% endif %}
+    <form action="{% url 'project:home' %}" method="post">
+        {% csrf_token %}
+        <input type="file" name="file" id="htmlFile" accept="text/html">
+        <input type="submit" name="Register"></br>
+    </form>
+</body>
+</html>
