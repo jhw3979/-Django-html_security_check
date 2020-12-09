@@ -10,7 +10,7 @@
         alert("{{mes}}");
     </script>
     {% endif %}
-    <form action="{% url 'project:home' %}" method="post">
+    <form action="{% url 'project:home' User.id %}" method="post">
         {% csrf_token %}
         <input type="file" name="file" id="htmlFile" accept="text/html">
         <input type="submit" name="Register"></br>
